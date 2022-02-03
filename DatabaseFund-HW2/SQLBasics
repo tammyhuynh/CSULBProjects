@@ -1,0 +1,55 @@
+-- number 8
+SELECT contactfirstname,contactlastname,creditlimit
+FROM homework.customers
+WHERE creditlimit>50000
+ORDER BY contactlastname,contactfirstname;
+
+--number 9
+SELECT *
+FROM homework.customers
+WHERE creditlimit = 0.00
+ORDER BY customername;
+
+-- number 10
+SELECT *
+FROM homework.offices
+WHERE NOT country = 'USA';
+
+-- number 11 !!
+SELECT *
+FROM homework.orders
+WHERE orderdate >= '2014-06-16' AND orderdate <= '2014-07-07';
+
+
+--number 12
+SELECT productname,quantityinstock
+FROM homework.products
+WHERE quantityinstock < 1000;
+
+-- number 13
+SELECT *
+FROM homework.orders
+WHERE shippeddate > requireddate;
+
+--number 14 !!!
+SELECT *
+FROM homework.customers
+WHERE customername LIKE '%Mini%';
+
+-- number 15
+SELECT productvendor,productname
+FROM homework.products
+WHERE productvendor = 'Highway 66 Mini Classics';
+
+-- number 16
+SELECT productvendor,productname
+FROM homework.products
+WHERE NOT productvendor = 'Highway 66 Mini Classics'
+ORDER BY productname;
+
+-- number 17
+SELECT reportsto, employeenumber,firstname,lastname
+FROM homework.employees
+WHERE reportsto is null;
+
+
